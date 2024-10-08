@@ -1,6 +1,6 @@
 # React + TypeScript + Vite
 
-Quiz App has already deployed at: https://vanhung0206.github.io/quiz-app
+React level 3 certification exam has already deployed at: https://vanhung0206.github.io/react-level-3-certification-exam/
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
