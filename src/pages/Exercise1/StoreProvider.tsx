@@ -1,5 +1,6 @@
 import { createContext, ReactNode, useEffect, useState } from "react";
 import {
+  getInitialGlobalState,
   getInitialGlobalStore,
   GlobalState,
   SetGlobalState,
@@ -30,7 +31,7 @@ export const StoreProvider = ({ children }: { children: ReactNode }) => {
           const newValue = JSON.parse(event.newValue as string);
           setGlobalState((prevStorage) => ({
             ...prevStorage,
-            [key]: newValue || null,
+            [key]: newValue ?? getInitialGlobalState()[key as StoreKeyType],
           }));
         } catch (error) {
           console.log("🚀 ~ localStorageEvent ~ error:", error);

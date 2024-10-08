@@ -1,0 +1,12 @@
+.user-info {
+  margin-top: 20px;
+}
+
+.user-info h3 {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.user-info strong {
+  font-weight: bold;
+}

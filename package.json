@@ -1,14 +1,13 @@
 {
-  "name": "quizz-app",
+  "name": "react-level-3-certification-exam",
   "private": true,
-  "version": "0.0.8",
+  "version": "0.0.1",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview",
-    "deploy": "gh-pages -d dist"
+    "preview": "vite preview"
   },
   "dependencies": {
     "antd": "^5.20.6",

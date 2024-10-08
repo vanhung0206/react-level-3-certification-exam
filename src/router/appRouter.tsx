@@ -2,6 +2,8 @@ import { createBrowserRouter } from "react-router-dom";
 import MainLayout from "../layouts/MainLayout";
 import ErrorBoundary from "../components/ErrorBoundary";
 import Exercise1 from "../pages/Exercise1";
+import Exercise2 from "../pages/Exercise2";
+import Exercise3 from "../pages/Exercise3";
 
 const appRouter = createBrowserRouter(
   [
@@ -15,11 +17,14 @@ const appRouter = createBrowserRouter(
           path: "exercise-1",
           element: <Exercise1 />,
         },
-        // {
-        //   path: "result",
-        //   element: <Result />,
-        //   loader: resultLoader,
-        // },
+        {
+          path: "exercise-2",
+          element: <Exercise2 />,
+        },
+        {
+          path: "exercise-3",
+          element: <Exercise3 />,
+        },
       ],
     },
   ],

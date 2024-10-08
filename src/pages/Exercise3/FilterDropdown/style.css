@@ -1,0 +1,50 @@
+.filter-dropdown {
+  position: relative;
+  width: 300px;
+}
+
+.filter-dropdown input {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+.result {
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+.dropdown-list {
+  width: 100%;
+  max-height: 200px;
+  overflow-y: auto;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-top: 5px;
+  z-index: 1000;
+  list-style: none;
+  padding: 0;
+}
+
+.dropdown-list li {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.dropdown-list b {
+  font-weight: bold;
+}
+
+.dropdown-list li:hover {
+  background-color: #f0f0f0;
+}
+
+.no-results {
+  padding: 10px;
+  background-color: white;
+  border: 1px solid #ccc;
+  margin-top: 5px;
+  text-align: center;
+}

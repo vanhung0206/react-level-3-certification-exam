@@ -1,0 +1,129 @@
+:root {
+  --primary-color: #00b96b;
+  --secondary-color: #6fee66;
+  --secondary-dark: #088906;
+  --gray: #666;
+}
+
+button {
+  border: 0;
+  outline: 0;
+}
+
+.modal {
+  width: 70%;
+  min-height: 200px;
+  background: #fff;
+  transition: 0.6s;
+  z-index: 100;
+  position: absolute;
+  top: -100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 20px;
+  overflow: hidden;
+  padding: 20px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.modal.show {
+  top: 50%;
+}
+
+.modal-header {
+  height: 30px;
+  display: flex;
+  align-items: center;
+}
+
+.modal-title {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.modal-close-icon {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.modal-close-icon button {
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  transform: translate(0, -10px);
+}
+
+.modal-content {
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--primary-color);
+  padding: 1.5rem;
+}
+
+.modal-content h4 {
+  font-size: 1.2rem;
+  font-weight: 800;
+  position: relative;
+}
+
+.modal-body {
+  flex: 1;
+}
+
+.modal-content h4::after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background: var(--secondary-color);
+  position: absolute;
+  bottom: -7px;
+  left: 0;
+}
+
+.modal-content h2 {
+  font-size: 2rem;
+  font-weight: 300;
+  margin-top: 3rem;
+}
+
+.modal-content p {
+  font-size: 1.1rem;
+  color: var(--gray);
+  text-align: center;
+  margin-top: 0.5rem;
+}
+
+.modal-btns {
+  height: 30%;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.overlay {
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+.modal.show + .overlay {
+  display: block;
+}
+
+@media screen and (max-width: 450px) {
+  .modal {
+    width: 300px;
+    left: calc(50% - 150px);
+  }
+}
