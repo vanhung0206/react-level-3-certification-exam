@@ -4,6 +4,7 @@ import ErrorBoundary from "../components/ErrorBoundary";
 import Exercise1 from "../pages/Exercise1";
 import Exercise2 from "../pages/Exercise2";
 import Exercise3 from "../pages/Exercise3";
+import Main from "../pages/Main";
 
 const appRouter = createBrowserRouter(
   [
@@ -13,6 +14,10 @@ const appRouter = createBrowserRouter(
       path: "/",
       errorElement: <ErrorBoundary />,
       children: [
+        {
+          index: true,
+          element: <Main />,
+        },
         {
           path: "exercise-1",
           element: <Exercise1 />,
